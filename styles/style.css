@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Raleway, 'Montserrat Alternates';
+}
+
+body{
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+li {list-style-type: none;}
+
+a {
+    font-size: 1rem;
+    text-decoration-line: none;
+}
+
+header {
+}
+
+/*Navbar*/
+.navbar {
+    width: 100%;
+    height: 75px;
+    max-width: 1500px;
+    position: fixed;
+    background-color: #1F2A37;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    z-index: 1;
+    text-align: center;
+}
+
+.navbar .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .toggle_btn{
+    color: white;
+    display: none;
+    
+}
+
+.navbar a {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: white;
+    font-size: 1rem;
+    padding: 25px 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar a:hover{
+    background-color: #344760;
+    border-bottom: #ff1100 10px solid;
+    transition: .6s;
+}
+
+.navbar .logo {
+    background-image: url(/img/Logo_LVTP.svg);
+    background-color: #ff1100;
+    width: 240px;
+    height: 75px;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar .logo:hover {
+    background-color: #344760;;
+    transition: 0.6s;
+}
+
+
+/*Tarjeta principal*/
+.cardMain {
+    background-image: url(/img/Playa\ Quesera\ \(Aerea\)_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+}
+
+.logoMain {
+    position: relative;
+    margin-top: 150px;
+    width: auto;
+    scale: 0.5;
+}
+
+.resena {
+    position: relative;
+    border-radius: 0 20px 20px 0;
+    color: white;
+    width: 50%;
+    height: 90%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(250, 171, 0, 0.4);
+    backdrop-filter: blur(15px);
+    align-items: start;
+    justify-content:center;
+
+}
+
+.resena h1 {
+    font-family: 'Montserrat Alternates';
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+
+/*Tarjeta servicios*/
+.card {
+    text-align: justify;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+}
+
+.infoBanner {
+    text-shadow: 1px 2px 2px rgb(0, 0, 0);
+    line-height: 25px;
+}
+
+.card img {
+    height: 100%;
+    width: 30%;
+}
+
+.bannerProduct{
+    width: 35%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.itemShirt {
+    background-image: url(/img/CamisasMU4.jpg);
+    background-size: cover;
+    background-position: center;
+    mask-image: linear-gradient(to right, black, black, transparent);
+}
+
+.itemPostCard{
+    background-image: url(/img/PostCardsMU.jpg);
+    background-size: cover;
+    background-position: center;
+    mask-image: linear-gradient(to left, black, black, transparent);
+}
+
+.itemVideo {
+    margin-left: 7%;
+}
+
+iframe {
+    border: 30px rgba(255, 255, 255, 0.5) solid;
+    border-radius: 20px;
+}
+
+.card .infoBanner {
+    width: 40%;
+    padding: 50px;
+}
+
+.card h1 {
+    font-family: Montserrat Alternates;
+    font-size: 2,3em;
+    padding: 1em 0;
+}
+
+.card p {
+    padding: 1em 0;
+}
+
+.card button {
+    font-weight: 800;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: white 2px solid;
+    padding: 10px 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.card button:hover {
+    background-color: white;
+    color: #1f2a37;
+    transition: 0.3s;
+}
+
+.cardRight{
+    text-align: right;
+}
+
+.impresos {
+    background-image: url(/img/Atadecer\ con\ flores\ amarillas.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.camisas {
+    background-image: url(/img/Playa\ Arrecife.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.audiovisuales {
+    background-image: url(/img/Playa\ Quesera\ 2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*Contacto*/
+.contact{
+    background-image: url(/img/Asset\ 2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMedia {
+    padding: 30px, 200px;
+}
+
+.socialMediaIcons {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMediaIcons a {
+    font-size: 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 40px;
+    flex-direction: row;
+}
+
+.socialMediaIcons ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMediaTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.services ul li {
+    font-size: 1.5em;
+    padding: 40px;
+}
+
+.services p {
+    padding: 25px;
+}
+
+/*Footer*/
+
+footer {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 0.8em;
+    color: white;
+    background-color: #1f2a37;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer h2 {
+    margin: 10px;
+}
+
+/*Responsive*/
+@media (max-width: 1300px) {
+    .navbar .link {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+        padding: 0  30px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .cardMain #containerMain {
+        display: flex;
+    }
+}
