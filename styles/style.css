@@ -6,47 +6,49 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Raleway, 'Montserrat Alternates';
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --redPV: #ff1100;
+    --BluePV: #1F2A37;
 }
 
 body{
-    height: 100vh;
     background-color: antiquewhite;
 }
 
-li {list-style-type: none;}
-
-a {
-    font-size: 1,1rem;
-    text-decoration-line: none;
-}
-
 /*Navbar*/
-.navbar {
-    width: 100%;
-    height: 75px;
-    max-width: 1500px;
+
+header {
     position: fixed;
-    background-color: #1F2A37;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 12px;
+    top: 0;
+    right: 0;
+    width: 100%;  
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: center; 
     z-index: 1;
-    text-align: center;
+    padding: 20px 10%;
+    transition: all ease .45s;
 }
 
-.navbar .link {
+.navbar {
+    width: 1800px;
+    height: 80px;
+    background-color: #1F2A37;
+    border-radius: 0 15px 15px 0;
+    overflow: hidden;
+    margin: 12px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end
 }
 
 .navbar .toggle_btn{
     color: white;
     display: none;
-    
 }
 
 .navbar a {
@@ -55,27 +57,27 @@ a {
     color: white;
     font-size: 1rem;
     padding: 25px 60px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .navbar a:hover{
-    background-color: #344760;
-    border-bottom: #ff1100 10px solid;
+    background-color: var(--BluePV);
+    border-top: var(--BluePV) 10px solid;
+    border-bottom: var(--redPV) 10px solid;
     transition: .6s;
 }
 
-.navbar .logo {
+.logo {
+    border-radius: 15px 0 0 15px;
     background-image: url(/img/Logo_LVTP.svg);
-    background-color: #ff1100;
+    background-color: var(--redPV);
     width: 240px;
-    height: 75px;
+    height: 80px;
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.navbar .logo:hover {
+.logo:hover {
     background-color: #344760;;
     transition: 0.6s;
 }
@@ -324,30 +326,9 @@ footer h2 {
 }
 
 /*Responsive*/
-@media (max-width: 1300px) {
-    .navbar .link {
+@media (min-width: 1000px) {
+    .toggle_btn {
         display: none;
     }
-
-    .navbar .toggle_btn {
-        display: block;
-        padding: 0  30px;
-    }
-
 }
-
-@media (max-width: 900px) {
-    .card {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    .navbar {
-        display: none;
-    }
-
-    .cardMain #containerMain {
-        display: flex;
-    }
-}
+   
