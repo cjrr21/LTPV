@@ -364,6 +364,11 @@ footer .footerInfo {
 }
 
 @media (max-width: 1350px) {
+    .logo {
+        background-image: url(/img/Asset\ 20.svg);
+        background-size: 60%;
+    }
+
     #firstcard {
         height: 1000px;
     }
@@ -382,6 +387,8 @@ footer .footerInfo {
 
 @media (max-width: 1030px) {
     
+    
+
     header {
         display: none;
         transition: var(--timeTransition);
