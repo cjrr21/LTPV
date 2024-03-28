@@ -19,28 +19,25 @@
                 <li><a href="#">Aventurate</a></li>
                 <li><a href="#">Tienda</a></li>
                 <li><a href="#">Cotizar servicio</a></li>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </ul>
             
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+            
         
     </header>
-    <div class="cardMain" id="firstcard">
-            <div id="containerMain">
-                <div></div>
-                <div class="logoMain"><img src="/img/Logo_LVTP.svg" alt="Logo LVTP" height="100px"></div>
-                <div class="resena">
-                    <h1>¡Viví el <br>Pura Vida!</h1>
-                    <p><strong>Bienvenid@ a Living the Pura Vida</strong>, un proyecto 100% costarricense, ofreciendo productos nacionales, como promocionales, camisas, y 
-                        un sinfín de artículos, mostrando también de manera visual las bellezas que tiene este país a disposición de quién así lo desee</p>
-                </div>
-                <div></div>
+
+    <div id="firstcard">
+            <div class="resena">
+                <h1>¡Viví el <br>Pura Vida!</h1>
+                <p><strong>Bienvenid@ a Living the Pura Vida</strong>, un proyecto 100% costarricense, ofreciendo productos nacionales, como promocionales, camisas, y 
+                    un sinfín de artículos, mostrando también de manera visual las bellezas que tiene este país a disposición de quién así lo desee</p>
             </div>
     </div>
         
-    <div class="card cardRight camisas">
-        <div class="bannerProduct itemShirt"></div>
+    <div id="camisas" class="card">
+        <div class="bannerProduct"></div>
         <div class="infoBanner">
             <h1>Camisas y promocionales</h1>
             <p>Camisas 100% Algodón, <strong>en variedad de colores, tallas,
@@ -51,7 +48,8 @@
         </div>
     </div>
 
-    <div class="card cardLeft impresos">
+    <div id="impresos" class="card">
+        <div class="bannerProduct"></div>
         <div class="infoBanner">
             <h1>Impresos</h1>
             <p>Costa Rica es inmensamente hermosa, y porque no
@@ -60,10 +58,10 @@
                 sala de habitación, entre otros. ¡Dale click!</strong></p>
                 <button class="btn">Ver más</button>
         </div>
-        <div class="bannerProduct itemPostCard"></div>
+        
     </div>
 
-    <div class="card cardRight audiovisuales">
+    <div id="audiovisuales" class="card">
         <div class="itemVideo">
                 <iframe width="480" height="285"
             src="https://www.youtube.com/embed/2H0gWnvqRm8">
@@ -83,19 +81,19 @@
     </div>
     
     <div class="contact">
-        <div class="socialMedia">
-            <div class="socialMediaTitle">
-                <h1>Contáctanos</h1>
+            <div class="socialMedia">  
+                <div class="socialMediaTitle">
+                    <h1>Contáctanos</h1>
+                </div>
+                <div class="socialMediaIcons">
+                    <ul>
+                        <li><a href="#"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="#"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="#"><a href="#"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="socialMediaIcons">
-                <ul>
-                    <li><a href="#"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li><a href="#"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href="#"><a href="#"><i class="fa-brands fa-square-whatsapp"></i></a></li>
-                </ul>
-            </div>
-        </div>
         <div class="services">
             <ul>
                 <li><i class="fa-solid fa-camera"></i><p>Fotografía</p></li>
@@ -106,8 +104,9 @@
         </div>
     </div>
     <footer>
-        <h2>Living the Pura Vida</h2>
-        <h3>2024</h3>
+        <div class="footerInfo">
+            <h2>Living the Pura Vida ©2024</h2>
+        </div>
     </footer>
 </body>
 </html>

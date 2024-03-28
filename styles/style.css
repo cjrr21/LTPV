@@ -13,6 +13,13 @@
 :root {
     --redPV: #ff1100;
     --BluePV: #1F2A37;
+    --LightBluePV: #2d3c50;
+
+    --fontBig: 4rem;
+    --fontSubT: 3rem;
+    --fontText: 1.5rem;
+    --iconSize: 4rem;
+    --timeTransition : 0.5s
 }
 
 body{
@@ -30,20 +37,25 @@ header {
     align-items: center;
     justify-content: center; 
     z-index: 1;
-    padding: 20px 10%;
-    transition: all ease .45s;
+    padding: 10px 3%;
+    transition: all ease-in-out .8s;
+}
+
+.toggle_btn {
+    display: none;
 }
 
 .navbar {
     width: 1800px;
     height: 80px;
-    background-color: #1F2A37;
+    background-color: var(--BluePV);
     border-radius: 0 15px 15px 0;
     overflow: hidden;
     margin: 12px 0;
     display: flex;
     align-items: center;
-    justify-content: flex-end
+    justify-content: flex-end;
+    transition: .5s;
 }
 
 .navbar .toggle_btn{
@@ -60,10 +72,15 @@ header {
 }
 
 .navbar a:hover{
-    background-color: var(--BluePV);
+    background-color: var(--LightBluePV);
     border-top: var(--BluePV) 10px solid;
     border-bottom: var(--redPV) 10px solid;
     transition: .6s;
+}
+
+.navbar a:active{
+    background-color: var(--redPV);
+    transition: .2s;
 }
 
 .logo {
@@ -84,89 +101,101 @@ header {
 
 
 /*Tarjeta principal*/
-.cardMain {
+
+#firstcard {
     background-image: url(/img/Playa\ Quesera\ \(Aerea\)_1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 700px;
-    display: grid;
-    grid-template-columns: 70% 30%;
-
-}
-
-.logoMain {
-    position: relative;
-    margin-top: 150px;
-    width: auto;
-    scale: 0.5;
+    height: 1200px;
+    display: flex;
+    align-items:flex-end;
+    justify-content:flex-start;
+    padding-bottom: 12%;
+    padding-left: 4%;
+    transition: var(--timeTransition);
 }
 
 .resena {
-    position: relative;
-    border-radius: 0 20px 20px 0;
+    position: absolute;
     color: white;
     width: 50%;
-    height: 90%;
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(250, 171, 0, 0.4);
-    backdrop-filter: blur(15px);
-    align-items: start;
-    justify-content:center;
-
+    transition: 1s ease-in-out;
 }
 
 .resena h1 {
+    font-size: var(--fontBig);
     font-family: 'Montserrat Alternates';
     padding-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 10px;
 }
 
+.resena p {
+    font-size: var(--fontText);
+}
+
 
 /*Tarjeta servicios*/
+
 .card {
-    text-align: justify;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 500px;
+    height: 700px;
+    text-shadow: 0 0 10px black;
+    border-top: 20px solid white;
+}
+
+.card h1 {
+    color: white;
+    font-family: Montserrat Alternates;
+    font-size: var(--fontSubT);
+    padding: .5rem 0;
+}
+
+.card p {
+    color: white;
+    padding: 1em 0;
+    font-size: var(--fontText);
+    line-height: 2rem;
 }
 
 .infoBanner {
-    text-shadow: 1px 2px 2px rgb(0, 0, 0);
-    line-height: 25px;
+    width: 40%;
+    padding: 50px;
+    padding-right: 3%;
+    margin-right: 3%;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, var(--LightBluePV), transparent);
 }
 
-.card img {
+#impresos .infoBanner {
+    margin-left: 3%;
+    padding-left: 3%;
+}
+
+.bannerProduct {
+    width: 50%;
     height: 100%;
-    width: 30%;
-}
-
-.bannerProduct{
-    width: 35%;
-    height: 500px;
-    overflow: hidden;
-}
-
-.itemShirt {
-    background-image: url(/img/CamisasMU4.jpg);
     background-size: cover;
     background-position: center;
+}
+
+#camisas .bannerProduct {
+    background-image: url(/img/CamisasMU4.jpg);
     mask-image: linear-gradient(to right, black, black, transparent);
 }
 
-.itemPostCard{
+#impresos .bannerProduct {
+    order: 2;
     background-image: url(/img/PostCardsMU.jpg);
-    background-size: cover;
-    background-position: center;
     mask-image: linear-gradient(to left, black, black, transparent);
 }
+
 
 .itemVideo {
     margin-left: 7%;
@@ -177,158 +206,271 @@ iframe {
     border-radius: 20px;
 }
 
-.card .infoBanner {
-    width: 40%;
-    padding: 50px;
+#camisas,
+#impresos,  
+#audiovisuales {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.card h1 {
-    font-family: Montserrat Alternates;
-    font-size: 2,3em;
-    padding: 1em 0;
+
+#camisas {
+    background-image: url(/img/Playa\ Arrecife.jpg);
+    text-align: right;
 }
 
-.card p {
-    padding: 1em 0;
+#impresos {
+    background: url(/img/Atadecer\ con\ flores\ amarillas.jpg);
+    background-size: cover;
+}
+
+#audiovisuales {
+    background-image: url(/img/Playa\ Quesera\ 2.jpg);
+    text-align: right;
 }
 
 .card button {
+    font-size: 1rem;
     font-weight: 800;
     color: white;
     background-color: rgba(0, 0, 0, 0);
     border: white 2px solid;
-    padding: 10px 16px;
+    padding: 13px 25px;
     text-transform: uppercase;
     letter-spacing: 3px;
     border-radius: 10px;
-    margin: 5px;
 }
 
 .card button:hover {
+    border: var(--LightBluePV) 2px solid;
     background-color: white;
-    color: #1f2a37;
+    color: var(--BluePV);
+    transform: translateY(-5px);
     transition: 0.3s;
+    box-shadow: 0 13px 15px rgba(0, 0, 0, 0.5);
 }
-
-.cardRight{
-    text-align: right;
-}
-
-.impresos {
-    background-image: url(/img/Atadecer\ con\ flores\ amarillas.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.camisas {
-    background-image: url(/img/Playa\ Arrecife.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.audiovisuales {
-    background-image: url(/img/Playa\ Quesera\ 2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
 
 /*Contacto*/
 .contact{
+    border-top: white solid 20px;
     background-image: url(/img/Asset\ 2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 250px;
+    height: 400px;
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.socialMedia {
-    padding: 30px, 200px;
-}
-
-.socialMediaIcons {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.socialMediaIcons a {
-    font-size: 2em;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    padding: 10px 40px;
-    flex-direction: row;
+    justify-content: space-around;
+    transition: var(--timeTransition);
 }
 
 .socialMediaIcons ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
-.socialMediaTitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.socialMediaTitle h1 {
+    font-size: var(--fontSubT);
+    text-align: center;
+    margin-bottom: 30px;
+    transition: var(--timeTransition);
 }
 
-.services {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.socialMediaIcons ul li {
+    font-size: var(--iconSize);
+    padding: 20px 40px;
+    transition: var(--timeTransition);
+}
+
+.socialMediaIcons a {
+    color: white;
+}
+
+.socialMediaIcons a:hover {
+    transition: .6s;
+    transform: translateY(-15px);
+    color: var(--redPV);
 }
 
 .services ul {
     display: flex;
     align-items: center;
-    justify-content: center;
     text-align: center;
+    transition: var(--timeTransition);
+    
 }
 
 .services ul li {
-    font-size: 1.5em;
-    padding: 40px;
+    padding: 20px 30px;
+    color: white;
+    font-size: 2rem;
 }
 
-.services p {
-    padding: 25px;
+.services ul i {
+    font-size: var(--fontBig);
+}
+
+.services ul li p{
+    padding: 20px 30px;
+    transition: var(--timeTransition);
+}
+
+
+.services ul i:hover {
+    transform: translateY(-5px);
+    color: var(--redPV);
+    transition: .3s;
 }
 
 /*Footer*/
 
 footer {
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    font-size: 0.8em;
     color: white;
     background-color: #1f2a37;
     text-align: center;
-    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
-footer h2 {
-    margin: 10px;
+footer .footerInfo {
+    font-size: .8rem;
+    padding: 20px;
 }
 
 /*Responsive*/
-@media (min-width: 1000px) {
-    .toggle_btn {
-        display: none;
+@media (max-width: 1600px) {
+    .services ul i {
+        font-size: 2rem;
+    }
+
+    .services ul li p{
+        padding: 20px 5px;
+        font-size: 1.4rem;
+    }
+
+    .socialMediaIcons ul li {
+        font-size: 2rem;
+        padding: 20px 10px;
+    }
+
+    .socialMediaTitle h1 {
+        font-size: 2rem;
+    }
+    
+}
+
+@media (max-width: 1350px) {
+    #firstcard {
+        height: 1000px;
+    }
+
+    :root {
+        --fontBig: 3rem;
+        --fontSubT: 2rem;
+        --fontText: 1rem;
+        --iconSize: 3rem;
+    }
+
+    .card p {
+        line-height: 1.3rem;
     }
 }
+
+@media (max-width: 1030px) {
+    
+    header {
+        display: none;
+        transition: var(--timeTransition);
+    }
+
+    .toggle_btn {
+        display: block;
+        z-index: 2;
+    }
+
+    #firstcard {
+        height: 1200px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .socialMediaIcons ul li {
+        font-size: 3rem;
+        padding: 20px 50px;
+    }
+
+    .services ul li p{
+        padding: 20px 5px;
+        font-size: 1.2rem;
+        color:rgb(155, 198, 255);
+    }
+
+}
    
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        height: 400px;
+        text-align: center;
+    }
+
+    .bannerProduct, .itemVideo {
+        display: none;
+    }
+
+    .infoBanner {
+        width: 90%;
+        padding: 0 4%;
+    }
+
+    #impresos .infoBanner,
+    #camisas .infoBanner,
+    #audiovisual, .infoBanner {
+        margin: 0;
+        padding: 5% 4%;
+        text-align: center;
+    }
+
+    @media (max-width: 600px) {
+        #firstcard {
+            height: 1000px;
+        }
+    
+        :root {
+            --fontBig: 2rem;
+            --fontSubT: 1.5rem;
+            --fontText: 1rem;
+            --iconSize: 2rem;
+
+        }
+    
+        .card p {
+            line-height: 1rem;
+        }
+
+        .socialMediaIcons ul li {
+            font-size: 1.9rem;
+            padding: 20px 10px;
+        }
+
+        .services i {
+            padding: 0 3%;
+        }
+    
+        .services ul li p{
+            padding: 10px 0;
+            font-size: 0.8rem;
+            color:rgb(155, 198, 255);
+        }
+    
+    }
+}
