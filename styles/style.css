@@ -63,6 +63,8 @@ header {
     display: none;
 }
 
+
+
 .navbar a {
     text-transform: uppercase;
     font-weight: 400;
@@ -71,11 +73,16 @@ header {
     padding: 25px 60px;
 }
 
-.navbar a:hover{
+.navbar a:hover:not(.activo) {
     background-color: var(--LightBluePV);
     border-top: var(--BluePV) 10px solid;
     border-bottom: var(--redPV) 10px solid;
     transition: .6s;
+}
+
+.activo {
+    border-top: var(--BluePV) 10px solid;
+    border-bottom: var(--redPV) 10px solid;
 }
 
 .navbar a:active{
