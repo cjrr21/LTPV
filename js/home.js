@@ -8,13 +8,5 @@ toggleBtn.addEventListener('click', function() {
   menu.classList.toggle('open');
 });
 
-//Cambiar Icono
-if(menu.classList.contains('open')){
-    menuIcon.classList.remove('fa-bars');
-    menuIcon.classList.add('fa-times');
-} else {
-    menuIcon.classList.remove('fa-times');
-    menuIcon.classList.add('fa-bars');
-}
 
 

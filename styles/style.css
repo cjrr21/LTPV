@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    margin: 0;
+*{  margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Raleway, 'Montserrat Alternates';
     list-style: none;
-    text-decoration: none;
-}
+    text-decoration: none;}
 
 :root {
     --redPV: #ff1100;
@@ -19,12 +17,9 @@
     --fontSubT: 3rem;
     --fontText: 1.5rem;
     --iconSize: 4rem;
-    --timeTransition : 0.5s
-}
+    --timeTransition : 0.5s}
 
-body{
-    background-color: antiquewhite;
-}
+body{background-color: antiquewhite;}
 
 /*Navbar*/
 
@@ -63,18 +58,22 @@ header {
 
 #menu {
     margin: 4%;
-    border-radius: 50px;
-    font-size: 2rem;
+    border-radius: 20px;
+    font-size: 1.5rem;
     display: none;
     position: fixed;
-    height: 40%;
+    height: 370px;
     width: 80%;
     z-index: 3;
     background-color: var(--LightBluePV);
+    opacity: .9;
     transition: all 0.3s;
 }
 
-#menu li {
+#menu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 30px 0;
 }
@@ -135,7 +134,7 @@ header {
     background-color: var(--redPV);
     width: 240px;
     height: 80px;
-    background-size: 70%;
+    background-size: 120px;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -193,7 +192,7 @@ header {
     width: 100%;
     height: 700px;
     text-shadow: 0 0 10px black;
-    border-top: 20px solid white;
+    border-top: 10px solid white;
 }
 
 .card h1 {
@@ -243,9 +242,7 @@ header {
 }
 
 
-.itemVideo {
-    margin-left: 7%;
-}
+.itemVideo {margin-left: 7%;}
 
 iframe {
     border: 30px rgba(255, 255, 255, 0.5) solid;
@@ -331,9 +328,7 @@ iframe {
     transition: var(--timeTransition);
 }
 
-.socialMediaIcons a {
-    color: white;
-}
+.socialMediaIcons a {color: white;}
 
 .socialMediaIcons a:hover {
     transition: .6s;
@@ -355,9 +350,7 @@ iframe {
     font-size: 2rem;
 }
 
-.services ul i {
-    font-size: var(--fontBig);
-}
+.services ul i {font-size: var(--fontBig);}
 
 .services ul li p{
     padding: 20px 30px;
@@ -389,9 +382,7 @@ footer .footerInfo {
 
 /*Responsive*/
 @media (max-width: 1600px) {
-    .services ul i {
-        font-size: 2rem;
-    }
+    .services ul i {font-size: 2rem;}
 
     .services ul li p{
         padding: 20px 5px;
@@ -412,12 +403,10 @@ footer .footerInfo {
 @media (max-width: 1350px) {
     .logo {
         background-image: url(/img/Asset\ 20.svg);
-        background-size: 60%;
+        background-size: 55px;
     }
 
-    #firstcard {
-        height: 1000px;
-    }
+    #firstcard {height: 1000px;}
 
     :root {
         --fontBig: 3rem;
@@ -426,9 +415,7 @@ footer .footerInfo {
         --iconSize: 3rem;
     }
 
-    .card p {
-        line-height: 1.3rem;
-    }
+    .card p {line-height: 1.3rem;}
 }
 
 @media (max-width: 1030px) {
@@ -438,6 +425,7 @@ footer .footerInfo {
         transition: var(--timeTransition);
     }
 
+    .card {border: 0;}
     .ltpv {display: block;}
 
     #toggle_btn {
@@ -447,13 +435,9 @@ footer .footerInfo {
         justify-content: end;
     }
 
-    #firstcard {
-        height: 1200px;
-    }
+    #firstcard {height: 1200px;}
 
-    .contact {
-        flex-direction: column;
-    }
+    .contact {flex-direction: column;}
 
     .socialMediaIcons ul li {
         font-size: 3rem;
@@ -478,9 +462,7 @@ footer .footerInfo {
         text-align: center;
     }
 
-    .bannerProduct, .itemVideo {
-        display: none;
-    }
+    .bannerProduct, .itemVideo {display: none;}
 
     .infoBanner {
         width: 90%;
@@ -496,9 +478,7 @@ footer .footerInfo {
     }
 
     @media (max-width: 600px) {
-        #firstcard {
-            height: 1000px;
-        }
+        #firstcard {height: 1000px;}
     
         :root {
             --fontBig: 2rem;
@@ -507,24 +487,19 @@ footer .footerInfo {
             --iconSize: 2rem;
         }
     
-        .card p {
-            line-height: 1rem;
-        }
+        .card p {line-height: 1rem;}
 
         .socialMediaIcons ul li {
             font-size: 1.9rem;
             padding: 20px 10px;
         }
 
-        .services i {
-            padding: 0 3%;
-        }
+        .services i {padding: 0 3%;}
     
         .services ul li p{
             padding: 10px 0;
             font-size: 0.8rem;
             color:rgb(155, 198, 255);
         }
-    
     }
 }
