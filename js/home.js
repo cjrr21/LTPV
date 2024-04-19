@@ -15,12 +15,7 @@ toggleBtn.addEventListener('click', function() {
     icon.classList.remove('fa-x');
     icon.classList.add('fa-bars');
   }
-
-   
- 
-  
 });
 
-//Cambiar icono de submenu
 
 
