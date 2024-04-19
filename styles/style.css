@@ -44,6 +44,7 @@ header {
     font-size: 2rem;
     position: fixed;
     z-index: 3;
+    transition: all ease .3s;
 }
 
 .ltpv {
@@ -67,7 +68,7 @@ header {
     z-index: 3;
     background-color: var(--LightBluePV);
     opacity: .9;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 #menu li{
@@ -83,10 +84,6 @@ header {
     text-transform: uppercase;
     font-weight: 700;
     color: lavender;
-}
-
-#menu .open {
-    display: block;
 }
 
 
