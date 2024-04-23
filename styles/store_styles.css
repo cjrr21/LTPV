@@ -24,35 +24,63 @@
 body {background-color: #e2e2e2;}
 
 /*Slider*/
-.slider-container {
-    height: 100vh;
-    width: 100%;
-}
-
-ul .slider {
+.slider {
     position: relative;
     width: 100%;
-    height: 300px;
-}
+    margin: auto;
+  }
+  
+  .slides {display: flex;}
 
-ul .slider li {
-    position: absolute;
+  .slides img {
     width: 100%;
-    height: 300px;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    transition: all 0.5s ease;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    z-index: 1;
+  }
+
+  .prev {
     left: 0;
-    top: 0;
-    opacity: 0;
-    transition: opacity .5s;
-}
+    border-radius: 0 50% 50% 0;
+    }
 
-ul .slider img {
-    width: 100px;
-    height: 100px;
-}
+  .next {
+    right: 0;
+    border-radius: 50% 0 0 50%;
+    }
 
-.menu-slider{
-    
-}
+    #caption {
+        overflow: hidden;
+        position: absolute;
+        background-color: rgba(0, 21, 48, 0.5);
+        width: 100%;
+        height: 100px;
+        bottom: 0;
+        transition: height ease .3s;
+        border-top: var(--BluePV) solid 10px;
+        color: white;
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        font-family: 'Montserrat Alternates';
+        padding-left: 25px;
+        padding-top: 25px;
+        font-weight: 600;
+        transition: transform .6s ease;
+    }
+
 
 /*Video section*/
 .container {
