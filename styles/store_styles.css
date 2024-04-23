@@ -29,13 +29,13 @@ body {background-color: #e2e2e2;}
     width: 100%;
 }
 
-.slider {
+ul .slider {
     position: relative;
     width: 100%;
     height: 300px;
 }
 
-.slider li {
+ul .slider li {
     position: absolute;
     width: 100%;
     height: 300px;
@@ -45,7 +45,7 @@ body {background-color: #e2e2e2;}
     transition: opacity .5s;
 }
 
-.slider img {
+ul .slider img {
     width: 100px;
     height: 100px;
 }
