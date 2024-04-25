@@ -25,61 +25,62 @@ body {background-color: #e2e2e2;}
 
 /*Slider*/
 .slider {
+    overflow: hidden;
     position: relative;
     width: 100%;
     margin: auto;
   }
   
-  .slides {display: flex;}
+.slides {display: flex;}
 
-  .slides img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    display: none;
-    transition: all 0.5s ease;
-  }
+.slides img {
+width: 100%;
+height: 100vh;
+object-fit: cover;
+display: none;
+transition: all 0.5s ease;
+}
 
-  .prev, .next {
+.prev, .next {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+padding: 15px;
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+border: none;
+z-index: 1;
+}
+
+.prev {
+left: 0;
+border-radius: 0 50% 50% 0;
+}
+
+.next {
+right: 0;
+border-radius: 50% 0 0 50%;
+}
+
+#caption {
+    overflow: hidden;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 21, 48, 0.5);
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    transition: height ease .3s;
+    border-top: var(--BluePV) solid 10px;
     color: white;
-    border: none;
-    z-index: 1;
-  }
-
-  .prev {
-    left: 0;
-    border-radius: 0 50% 50% 0;
-    }
-
-  .next {
-    right: 0;
-    border-radius: 50% 0 0 50%;
-    }
-
-    #caption {
-        overflow: hidden;
-        position: absolute;
-        background-color: rgba(0, 21, 48, 0.5);
-        width: 100%;
-        height: 100px;
-        bottom: 0;
-        transition: height ease .3s;
-        border-top: var(--BluePV) solid 10px;
-        color: white;
-        font-size: 1.9rem;
-        text-transform: uppercase;
-        font-family: 'Montserrat Alternates';
-        padding-left: 25px;
-        padding-top: 25px;
-        font-weight: 600;
-        transition: transform .6s ease;
-    }
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    font-family: 'Montserrat Alternates';
+    padding-left: 25px;
+    padding-top: 25px;
+    font-weight: 600;
+    transition: transform .6s ease;
+}
 
 
 /*Video section*/
