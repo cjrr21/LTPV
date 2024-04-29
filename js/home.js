@@ -3,7 +3,7 @@ const toggleBtn = document.getElementById('toggle_btn'),
       icon = document.getElementById('icon'),
       slides = document.querySelectorAll('.slides img'),
       place = document.getElementById('caption');
-      navbar = document.getElementsByClassName('.navbar');
+      header = document.querySelector('header');
 let slideIndex = 1;
 //Abrir el menu
 toggleBtn.addEventListener('click', function() {
@@ -22,17 +22,18 @@ toggleBtn.addEventListener('click', function() {
 function showSlides(n) {
   if (n > slides.length) {slideIndex = 1;}
   if (n < 1) {slideIndex = slides.length;}
-
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
+    slides[i].style.opacity = '0';
   }
-    slides[slideIndex - 1].style.display = 'block';
-    place.textContent = '';
-    place.style.transform = 'translateY(100%) translateX(0%)';
-    setTimeout(() => {
+  slides[slideIndex - 1].style.display = 'block';
+  slides[slideIndex - 1].style.opacity = '1';
+  place.textContent = '';
+  place.style.transform = 'translateY(100%) translateX(0%)';
+  setTimeout(() => {
     place.textContent = slides[slideIndex-1].getAttribute("alt");
     place.style.transform = 'translateY(0) translateX(0%)';
-    }, 1500);
+  }, 1500);
 }
 
 function plusSlides(n) {showSlides(slideIndex += n);}
@@ -41,13 +42,3 @@ document.querySelector('.prev').addEventListener('click', () => {plusSlides(-1);
 document.querySelector('.next').addEventListener('click', () => {plusSlides(1);});
 
 
-window.addEventListener('scroll', function() {
-    let windowScrollY = window.scrollY || window.pageYOffset;
-
-    if (windowScrollY < 900) {
-      navbar.slyle.transform =  'translateY(-5px)';
-      console.log('Peque ' + windowScrollY);
-    } else {
-      console.log('Grande ' + windowScrollY);
-    }
-  });

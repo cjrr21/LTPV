@@ -7,8 +7,8 @@
     --LightBluePV: #2d3c50;
     --orangePV:rgb(255, 115, 0);
 
-    --textFont: 1.3rem;
-    --textTitle: 1.9rem;
+    --textFont: 1.2rem;
+    --textTitle: 1.5rem;
     --textBig:2.4rem;
 }
 
@@ -29,38 +29,42 @@ body {background-color: #e2e2e2;}
     position: relative;
     width: 100%;
     margin: auto;
-  }
-  
-.slides {display: flex;}
+}
 
 .slides img {
-width: 100%;
-height: 100vh;
-object-fit: cover;
-display: none;
-transition: all 0.5s ease;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.slides .slider_tienda img {
+    opacity: 1;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
 }
 
 .prev, .next {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-cursor: pointer;
-padding: 15px;
-background-color: rgba(0, 0, 0, 0.5);
-color: white;
-border: none;
-z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    z-index: 1;
 }
 
 .prev {
-left: 0;
-border-radius: 0 50% 50% 0;
+    left: 0;
+    border-radius: 0 50% 50% 0;
 }
 
 .next {
-right: 0;
-border-radius: 50% 0 0 50%;
+    right: 0;
+    border-radius: 50% 0 0 50%;
 }
 
 #caption {
@@ -82,20 +86,22 @@ border-radius: 50% 0 0 50%;
     transition: transform .6s ease;
 }
 
-
-/*Video section*/
+/*Items (Video and productos) section*/
 .container {
+    border: 3px solid var(--BluePV);
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px 20px;
-    margin: 0 2%;
+    margin: 0% 4% 4%;
 }
 
 .conoce {
-    margin: 0 6%;
-    width: 90%;
+    margin: 0 auto;
+    margin-left: 4%;
+    margin-right: 4%;
     padding: 100px 0;
     display: flex;
     align-items: center;
@@ -115,84 +121,101 @@ border-radius: 50% 0 0 50%;
     font-size: var(--textBig);
 }
 
-.videos {
+.item {
     align-items: center;
+    border-radius: 5px;
+    padding: 30px;
     margin: 10px;
-    height: 600px;
-    width: 32%;
-    background-color: white;
-    border-radius: 10px;
+    height: auto;
+    width: 23%;
     transition: .5s;
 }
 
-.videos h1 {
+.item:hover {
+    background-color:#cdcdcd;
+}
+
+.item h1 {
     font-family: 'Montserrat Alternates';
     font-size: var(--textTitle);
     text-align: center;
 }
 
-.videos p {
+.item p {
     text-align: justify;
+    font-style: italic;
+    font-family: 'Raleway';
     font-size: var(--textFont);
     padding: 3% 6%;
 }
 
-iframe {
+.item .price {
+    text-align: center;
+    font-weight: 700;
+    color: var(--orangePV);
+    font-style: normal;
+    font-size: var(--textFont);
+} 
+
+.item iframe, .item img{
     width: 100%;
-    height: 60%;
+    height: 70%;
+    border: 0;
+    border-radius: 0;
+    padding-bottom: 40px;
+    border-radius: 5px;
 }
 
 /*RESPONSIVE*/
 @media (max-width: 1650px) {
+    .item {
+        width: 29%;
+        margin: 20px;
+    }
+    .linea {width: 800px;}
+}
 
-    .videos {
+@media (max-width: 1350px) {
+    :root{
+        --textFont: 1.1rem;
+        --textBig:2.4rem;
+    }
+    .linea {width: 510px;}
+}
+
+@media (max-width: 1000px) {
+    .item {
         width: 42%;
         margin: 20px;
     }
 
     .linea {
-        width: 800px;
-    }
-}
-
-@media (max-width: 1350px) {
-
-    .linea {
-        width: 510px;
-    }
-}
-
-@media (max-width: 1000px) {
-
-    .videos {
-        width: 100%;
-    }
-
-    .linea {
+        display: none;
         width: 300px;
     }
 
-    iframe {
-        width: 100%;
-        height: 60%;
-    }
-}
-
-@media (max-width: 1000px) {
-
-    .videos {
-        width: 100%;
-    }
-
-    .linea {
-        display: none;
-    }
-
     .conoce {
-        border-radius: 20px;
-        margin-top: 50px;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 24px;
         padding: 20px 0;
         border: solid 3px var(--BluePV);
+    }
+
+    .container{margin-top: 4%;}
+}
+
+@media (max-width: 650px) {
+    :root{
+        --textFont: 1rem;
+        --textTitle: 1.4rem;
+        --textBig:2.1rem;
+        transition: all ease .4s;
+    }
+    
+    .item {
+        width: 100%;
+        margin: 20px;
     }
 
 }

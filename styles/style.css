@@ -45,6 +45,7 @@ header {
     position: fixed;
     z-index: 3;
     transition: all ease .3s;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.34);
 }
 
 .ltpv {
@@ -85,7 +86,6 @@ header {
     font-weight: 700;
     color: lavender;
 }
-
 
 .navbar {
     display: none;
@@ -142,9 +142,7 @@ header {
     transition: 0.6s;
 }
 
-
 /*Tarjeta principal*/
-
 #firstcard {
     background-image: url(/img/Playa\ Quesera\ \(Aerea\)_1.jpg);
     background-repeat: no-repeat;
@@ -176,13 +174,9 @@ header {
     letter-spacing: 10px;
 }
 
-.resena p {
-    font-size: var(--fontText);
-}
-
+.resena p {font-size: var(--fontText);}
 
 /*Tarjeta servicios*/
-
 .card {
     display: flex;
     align-items: center;
@@ -239,7 +233,6 @@ header {
     mask-image: linear-gradient(to left, black, black, transparent);
 }
 
-
 .itemVideo {margin-left: 7%;}
 
 iframe {
@@ -254,7 +247,6 @@ iframe {
     background-position: center;
     background-size: cover;
 }
-
 
 #camisas {
     background-image: url(/img/Playa\ Arrecife.jpg);
@@ -339,7 +331,6 @@ iframe {
     align-items: center;
     text-align: center;
     transition: var(--timeTransition);
-    
 }
 
 .services ul li {
@@ -363,7 +354,6 @@ iframe {
 }
 
 /*Footer*/
-
 footer {
     color: white;
     background-color: #1f2a37;
@@ -391,11 +381,7 @@ footer .footerInfo {
         font-size: 2rem;
         padding: 20px 10px;
     }
-
-    .socialMediaTitle h1 {
-        font-size: 2rem;
-    }
-    
+    .socialMediaTitle h1 {font-size: 2rem;}
 }
 
 @media (max-width: 1350px) {
@@ -410,12 +396,15 @@ footer .footerInfo {
         --fontText: 1rem;
         --iconSize: 3rem;
     }
-
-    .card p {line-height: 1.3rem;}
 }
 
 @media (max-width: 1030px) {
-    
+    .resena{
+        margin: auto;
+        width: 80%;
+        text-align: center;
+    }
+
     header {
         display: none;
         transition: var(--timeTransition);
@@ -423,6 +412,7 @@ footer .footerInfo {
 
     .card {border: 0;}
     .ltpv {display: block;}
+    .contact {flex-direction: column;}
 
     #toggle_btn {
         position: fixed;
@@ -430,8 +420,6 @@ footer .footerInfo {
         z-index: 2;
         justify-content: end;
     }
-
-    .contact {flex-direction: column;}
 
     .socialMediaIcons ul li {
         font-size: 3rem;
@@ -471,7 +459,6 @@ footer .footerInfo {
     }
 
     @media (max-width: 600px) {
-
         :root {
             --fontBig: 2rem;
             --fontSubT: 1.5rem;
